@@ -120,9 +120,7 @@ class BasicModels(object):
         
     def RF_Ngrams(self,xTrain, xTest, yTrain, yTest, _n_estimators = 100, _n_jobs=3, _criterion = 'gini', _max_depth  = 15, _verbose=10):
         print("--------------- Random Forest ---------------")
-        
-        import scikitplot as skplt
-        import matplotlib.pyplot as plt
+       
         
         rfc = RandomForestClassifier(n_estimators = _n_estimators, max_features=None,  n_jobs=_n_jobs, criterion = _criterion, max_depth  = _max_depth, verbose=_verbose)
 
@@ -180,7 +178,7 @@ class BasicModels(object):
     
  
     def bc_LSTM_Ngrams(self,_xTrain, _xTest, yTrain, yTest, _loss='mean_squared_error', _optimizer= 'SGD', _metrics=['accuracy'], _epochs = 25 , _validation_split = 0.2, _batch_size = 2, _verbose = 0 ):
-        print("--------------- bc LSTM ---------------")       
+        print("--------------- LSTM ---------------")       
         
         xTrain,xTest,_input_shape = BasicModels.Shape_Reshaper(_xTrain, _xTest)
         
@@ -203,7 +201,7 @@ class BasicModels(object):
         print("=== Confusion Matrix LSTM ===")
         print(confusion_matrix(yTest, y_pred))
         print('\n')
-        print("--------------- bc LSTM ---------------")
+        print("--------------- LSTM ---------------")
         return model
 
 
