@@ -192,6 +192,8 @@ wcnn1d_ngram13  = basic_model.CNN1D_Ngrams(wxTrain13, wxTest13, wyTrain13, wyTes
 wlstm_ngram13 = basic_model.bc_LSTM_Ngrams(wxTrain13, wxTest13, wyTrain13, wyTest13, _epochs = 50, _verbose=2)
 
 
+
+"""
 #character best model
 models = [svm_ngram1,svm_ngram12, svm_ngram13,svm_ngram2,svm_ngram3]
 xTest_data = [xTest1,xTest12,xTest13,xTest2,xTest3]
@@ -227,6 +229,6 @@ labels = ["Word-uni+tri-SVM", "Char-uni-SVM", "Fasttext-w2v-SVM"]
 xTest_data = [wxTest13,xTest1,fxTest]
 yTest_data = [wyTest13,yTest1,fyTest]
 basic_model.ROC_CURVE_ALL_MODEL_Ngram(xTest_data, yTest_data, models,labels, _linestyle = ':', _figsize = (8,8))
-
+"""
 
 
